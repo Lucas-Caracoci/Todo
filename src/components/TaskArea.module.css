@@ -1,0 +1,156 @@
+.taskArea {
+    max-width: 736px;
+    margin: 0 auto;
+}
+
+.taskAreaHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.taskAreaHeader div {
+    display: flex;
+    gap: 1rem;
+    color: var(--blue);
+
+}
+
+.taskAreaHeader p {
+
+    font-weight: bold;
+}
+
+.taskAreaHeader span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.2rem;
+    font-size: 0.8rem;
+    color: var(--gray-100);
+    background-color: var(--gray-400);
+    padding: 0.125rem 0.5rem;
+    border-radius: 8px
+}
+
+.completed {
+    color: var(--purple);
+}
+
+
+.emptyTaskArea {
+    margin-top: 1.5rem;
+    padding-top: 4rem;
+    
+    border-top: 2px solid var(--gray-400);
+
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1rem;
+
+    text-align: center;
+    
+}
+
+.emptyTaskArea p {
+    color: var(--gray-300);
+    line-height: 1.4;
+   font-size: 1.2rem;
+    
+}
+
+.emptyTaskArea img {
+    width: 4rem;
+    
+}
+.emptyTaskArea span {
+    color: var(--gray-300);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+.task{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    
+    padding: 1rem ;
+    border-radius: 8px;
+    background-color: var(--gray-500);
+
+    margin-top: 1rem;
+    
+}
+.task div{
+    display: flex;
+    gap: 1rem;
+
+    
+    
+}
+.content{
+    color: var(--gray-100);
+    font-size: 0.9rem;
+    line-height: 1.4;
+   
+    word-break: break-word;
+   
+}
+.task button{
+    height: 0rem;
+    border: none;
+    cursor: pointer;
+    color: var(--gray-300);
+    font-size: 0rem;
+    transition: 0.2s;
+}
+.task button:hover{
+    color: var(--danger);
+    font-size: 1rem;
+    
+    transition: 0.2s;
+    
+}
+
+input[type="checkbox"]{
+    appearance: none; 
+    
+    height: 1.5rem;
+    width: 1.5rem;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    cursor: pointer;
+  
+    border: 2px solid var(--blue);
+    outline: none;
+
+   
+    
+}
+input[type="checkbox"]:checked {
+    background-color: var(--purple-dark);
+    border: 2px solid var(--purple-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: var(--gray-100);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.task +.task{
+    margin-top: 1rem;
+}
