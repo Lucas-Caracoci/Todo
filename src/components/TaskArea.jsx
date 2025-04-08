@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './TaskArea.module.css';
-import { Trash } from 'phosphor-react'
+import { Check, Trash } from 'phosphor-react'
 
 const TaskArea = () => {
 
@@ -33,11 +33,12 @@ const TaskArea = () => {
                     tasks.length > 0 ? (
                         tasks.map((task) => (
                             <div className={styles.task} key={task.id}>
+                                
                                 <div>
-                                    <input type="checkbox" name="" id="" className={styles.checkBox}/>
+                                <button className={styles.checkButton}> <Check size={20} /> </button>
                                     <p className={styles.content}>{task.content}</p>
                                 </div>
-                                <button><Trash size={24} /></button>
+                                <button className={styles.deleteButton}><Trash size={24} /></button>
                             </div>
                         ))
 

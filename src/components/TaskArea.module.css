@@ -104,7 +104,7 @@
     word-break: break-word;
    
 }
-.task button{
+.deleteButton{
     height: 0rem;
     border: none;
     cursor: pointer;
@@ -112,7 +112,7 @@
     font-size: 0rem;
     transition: 0.2s;
 }
-.task button:hover{
+.deleteButton:hover{
     color: var(--danger);
     font-size: 1rem;
     
@@ -120,36 +120,25 @@
     
 }
 
-input[type="checkbox"]{
-    appearance: none; 
-    
+.checkButton{
     height: 1.5rem;
-    width: 1.5rem;
-    flex-shrink: 0;
-
-    border-radius: 50%;
-    cursor: pointer;
-  
-    border: 2px solid var(--blue);
-    outline: none;
-
-   
-    
-}
-input[type="checkbox"]:checked {
-    background-color: var(--purple-dark);
-    border: 2px solid var(--purple-dark);
+    width:  1.5rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 2px solid var(--blue);
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    
 }
 
-input[type="checkbox"]:checked::after {
-    content: '✔';
-    color: var(--gray-100);
-    font-size: 1rem;
-    font-weight: bold;
+.checkButton:hover{
+    background-color: var(--purple-dark);
 }
+
 
 .task +.task{
     margin-top: 1rem;
