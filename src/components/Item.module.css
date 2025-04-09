@@ -1,31 +1,42 @@
-.task{
+.task {
     display: flex;
     gap: 2rem;
     justify-content: space-between;
-    
-    padding: 1rem ;
+
+    padding: 1rem;
     border-radius: 8px;
     background-color: var(--gray-500);
 
     margin-top: 1rem;
-    
+
 }
-.task div{
+
+.task div {
     display: flex;
     gap: 1rem;
 
-    
-    
+
+
 }
-.content{
+
+.checked p {
+    color: var(--gray-300);
+    text-decoration: line-through ;
+    font-style: italic;
+
+
+}
+
+.content {
     color: var(--gray-100);
     font-size: 0.9rem;
     line-height: 1.4;
-   
+    text-transform: capitalize;
     word-break: break-word;
-   
+
 }
-.deleteButton{
+
+.deleteButton {
     height: 0rem;
     border: none;
     cursor: pointer;
@@ -33,34 +44,49 @@
     font-size: 0rem;
     transition: 0.2s;
 }
-.deleteButton:hover{
+
+.deleteButton:hover {
     color: var(--danger);
     font-size: 1rem;
-    
+
     transition: 0.2s;
-    
+
 }
 
-.checkButton{
+.checkButton {
     height: 1.5rem;
-    width:  1.5rem;
+    width: 1.5rem;
     display: flex;
     align-items: center;
 
     border-radius: 50%;
-
+    color: transparent;
     border: 2px solid var(--blue);
     background-color: transparent;
-    color: #fff;
+    transition: .1s;
+
     cursor: pointer;
-    
-}
 
-.checkButton:hover{
+}
+.checked .checkButton {
     background-color: var(--purple-dark);
+    color: var(--gray-100);
+    border-color: var(--purple-dark);
+}
+
+.checkButton:hover {
+   transition: .1s;
+    color: var(--gray-100);
+    border-color: var(--purple-dark);
+}
+.checked .checkButton:hover {
+    background-color: transparent;
+    
+    border-color: var(--blue);
+    transition: .1s;    
 }
 
 
-.task +.task{
+.task+.task {
     margin-top: 1rem;
 }
